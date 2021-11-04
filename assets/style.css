@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&family=Ruslan+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+p {
+    font-size: 1.1em;
+    font-weight: 500;
+    color:white;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("image/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+.banner .content h2{
+    font-size: 5em;
+    color:white;
+}
+.button {
+    font-weight: 700;
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transform: 0.5s;
+}
+
+.button:hover {
+    font-size: 19px;
+    font-weight: bolder;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky {
+    background-color: #FCB817;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0,05);
+}
+header .logo {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+header .logo img {
+    height: 120px;
+    width: auto;
+}
+header.sticky .logo {
+    color: #201F31;
+    background-color: transparent;
+}
+header .nvg {
+    position: relative;
+    display: flex;
+}
+header .nvg li {
+    list-style: none;
+    margin-left: 30px;
+}
+header .nvg li a {
+    background-color: transparent;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+header.sticky .nvg li a {
+    background-color: transparent;
+    color: #201F31;
+}
+header .nvg li a:hover {
+    color: #F16E52;
+}
+
+article {
+    padding: 100px;
+}
+.titletext {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.titletext span {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.title {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title p {
+text-align: center;
+    color: #fff;
+}
+
+.coach {
+    background-image: url("image/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+.coach .slider{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-shadow: 0 5px 35px rgba(0,0,0,0,08);
+}
+.coach .slider .slider-items {
+    width: 474px;
+    height: 474px;
+    background-color: #fff;
+    border-radius: 27% 0 0;
+    border: 13px solid #FCB817;
+
+}
+.coach .slider .slider-items .item img:hover{
+    border-radius: 25% 25% 0;
+}
+.coach .slider .left-slide,.slider .right-slide{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #201F31;
+    border-radius: 50%;
+    color:#ffffff;
+    font-size: 20px;
+    top:57%;
+    cursor: pointer;
+    margin-top: -20px;
+    text-align: center;
+    font-weight: bolder;
+}
+.coach .slider .left-slide:hover,.coach .slider .right-slide:hover{
+    height: 45px;
+    width: 45px;
+    font-size: 22px;
+    box-shadow: 0px 0px 10px black;
+    background-color: #FCB817;
+    color: #111;
+}
+
+.coach .slider .left-slide{
+    left: 383px;
+}
+.coach .slider .right-slide{
+    right: 383px;
+}
+.coach .slider .slider-items .item img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 50% 0 0;
+}
+
+.coach .slider .slider-items .item{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+}
+.coach .slider .slider-items .item .caption{
+position: absolute;
+width: 100%;
+height: 60px;
+bottom: 0px;
+left: 0px;
+background-color: rgba(0,0,0,.5);
+line-height: 60px;
+text-align: center;
+color: #ffffff;
+font-size: 30px;
+
+}
+
+.coach .slider .slider-items .item.active{
+    display: block;
+}
+.how {
+    background-image: url("image/bg3.jpg");
+    background-size: cover;
+}
+.white .titletext, .white p {
+    color: #fff;
+}
+.how .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.how .content .box {
+    width: 340px;
+    margin: 20px;
+    padding: 40px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30% 0 30% 0;
+}
+.how .content .box:hover {
+    transition: 2ms;
+    border: dotted;
+}
+.how .content .box .imgbox {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: dotted;
+    border-color: #ff0157;
+}
+
+.how .content .box .imgbox img{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.how .content .box .text {
+    text-align: center;
+
+}
+.how .content .box .text p {
+    color: rgb(165, 160, 160);
+    font-style: italic;
+}
+
+.kontak {
+    background-image: url("image/bg4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.kntkform {
+    margin: auto;
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0,0,0,0,1);
+    width: 60%;
+    justify-content: center;
+}
+.kntkform h3 {
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.kntkform .inputbox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.kntkform .inputbox input, .kntkform .inputbox textarea {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+.kntkform .inputbox input[type="submit"] {
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+.kntkform .inputbox:hover {
+    font-size: 17px;
+    font-weight: bold;
+}
+.cpyr {
+    background-color: #201F31;
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0,0,0,0,1);
+    text-align: center;
+}
+.cpyr p {
+    color: #fff;
+}
+.cpyr a {
+    color: #ff0157;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.bio {
+    background-image: url("image/bg3.jpg");
+    background-size: cover;
+}
+.white .titletext, .white p {
+    color: #fff;
+}
+.bio .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.bio .content .box {
+    width: 365px;
+    height: 835px;
+    margin: 15px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0,08);
+    background-color: #FCB817;
+    border-radius: 25% 0% 25% 0%;
+}
+.bio .content .box .imgbox {
+    position: relative;
+    width: 345px;
+    height: 500px;
+    margin: auto;
+}
+
+.bio .content .box .text {
+    text-align: center;
+}
+
+.bio .content .box .text h3 {
+    color: #111;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+}
+.bio .content .box .text h3  span{
+    color: #ff0157;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.bio .content .box .imgbox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+    border-radius: 35% 0% 0% 0%;
+}
+
+@media (max-width: 991px) {
+    header, header.sticky {
+        padding: 10px 20px;
+    }
+    header .nvg {
+        display: none;
+    }
+    header .nvg.active {
+        width: 50%;
+        height: calc(100% - 68%);
+        position: fixed;
+        top: 88px;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #FCB817;
+    }
+    header .nvg li {
+        margin-left: 0px;
+    }
+    header .nvg li a {
+        background-color: transparent;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.4em;
+    }
+    .togglemenu {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-image: url("image/menutoggle.png");
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position:center center;
+        cursor: pointer;
+    }
+    .togglemenu.active {
+        background-image: url("image/close.png");
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header .sticky .togglemenu {
+        filter: invert(1);
+    }
+    article {
+        padding: 20px;
+    }
+    .banner .content h2 {
+        font-size: 3em;
+        color: #fff;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row .kol1 .imgbox {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+    }
+    .menu .content {
+        margin-top: 20px;
+    }
+    .menu .content .box{
+        margin: 10px;
+    }
+    .menu .content .box .imgbox{
+        height: 260px;
+    }
+    .title {
+        text-align: center;
+    }
+    .titletext {
+        font-size: 1.8em;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+        font-weight: 300;
+    }
+    .how .content .box {
+        margin: 10px;
+        padding: 20px;
+    }
+    .kntkform {
+        padding: 35px 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .coach {
+        padding: 35px 40px;
+    }
+    .coach .slider .right-slide {
+        right: 50px;
+    }.coach .slider .left-slide {
+        left: 50px;
+    }
+    .coach .slider .slider-items {
+        width: 260px;
+        height: 265px;
+    }
+    .coach .slider .slider-items .item .caption{
+        font-size: 20px;
+    }
+}
